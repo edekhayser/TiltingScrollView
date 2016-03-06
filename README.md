@@ -21,8 +21,9 @@ public var tiltingFactor: CGFloat = 20
 ##Public Methods##
 
 ```swift
-/// true: Tilting the device causes the scroll view to scroll. `scrollingEnabled = false`
-/// false: Tilting the device does nothing. `scrollEnabled = true`
+/// Enables or disables the tilting behavior of the scroll view.
+/// - true: Tilting the device causes the scroll view to scroll. `scrollingEnabled = false`
+/// - false: Tilting the device does nothing. `scrollEnabled = true`
 
 public func setTiltingEnabled(tiltingEnabled: Bool)
 ```
