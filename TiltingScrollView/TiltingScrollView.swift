@@ -11,11 +11,39 @@ import CoreMotion
 
 public class TiltingScrollView: UIScrollView {
 
-    public var tiltingFactor: CGFloat = 20
+    // MARK: Public Variables
+    
+    /// Factor by which the accelerometer data is multiplied to scroll the view. Larger values cause faster scrolling.
+    
+    public var tiltingFactor: CGFloat = 20.0
+    
+    // MARK: Private Variables
     
     private var motionManager = CMMotionManager()
     
     private var initialAcceleration: Double!
+    
+    // MARK: Public Methods
+    
+    /// Enables or disables the tilting behavior of the scroll view.
+    /// - true: Tilting the device causes the scroll view to scroll. `scrollingEnabled = false`
+    /// - false: Tilting the device does nothing. `scrollEnabled = true`
+    
+    public func setTiltingEnabled(tiltingEnabled: Bool){
+        if tiltingEnabled{
+            if !motionManager.accelerometerActive{
+                calibrate()
+                beginTiltToScroll()
+            }
+            scrollEnabled = false
+        } else {
+            motionManager.stopAccelerometerUpdates()
+            scrollEnabled = true
+        }
+    }
+    
+    /// Resets the internal calculations to use the current angle of the device as the reference point.
+    /// At the device's current angle, the scroll view will not scroll.
     
     public func calibrate(){
         if UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation){
@@ -25,7 +53,9 @@ public class TiltingScrollView: UIScrollView {
         }
     }
 
-    public func beginTiltToScroll(){
+    // MARK: Private Methods
+    
+    private func beginTiltToScroll(){
         guard motionManager.accelerometerAvailable else {
             print("TiltingScrollView: Accelerometer is not available on this device.")
             return
@@ -48,19 +78,6 @@ public class TiltingScrollView: UIScrollView {
             
             let yOffset = self.tiltingFactor * CGFloat(yAcceleration)
             self.contentOffset = CGPoint(x: self.frame.origin.x, y: max(min(self.contentOffset.y - yOffset, self.contentSize.height - self.frame.size.height), 0))
-        }
-    }
-    
-    public func setTiltingEnabled(tiltingEnabled: Bool){
-        if tiltingEnabled{
-            if !motionManager.accelerometerActive{
-                calibrate()
-                beginTiltToScroll()
-            }
-            scrollEnabled = false
-        } else {
-            motionManager.stopAccelerometerUpdates()
-            scrollEnabled = true
         }
     }
     

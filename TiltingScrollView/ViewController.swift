@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        scrollView.beginTiltToScroll()
+        scrollView.setTiltingEnabled(true)
     }
 
     @IBAction func calibrate(sender: UIButton) {
