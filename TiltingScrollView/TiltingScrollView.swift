@@ -77,7 +77,7 @@ public class TiltingScrollView: UIScrollView {
                 yAcceleration = self.initialAcceleration - data.acceleration.x
             }
             
-            let shouldOffsetBeFlipped = UIApplication.sharedApplication().statusBarOrientation == .LandscapeRight || UIApplication.sharedApplication().statusBarOrientation == .PortraitUpsideDown
+            let shouldOffsetBeFlipped = UIApplication.sharedApplication().statusBarOrientation == .LandscapeLeft || UIApplication.sharedApplication().statusBarOrientation == .PortraitUpsideDown 
             
             let yOffset = self.tiltingFactor * CGFloat(yAcceleration) * (shouldOffsetBeFlipped ? -1 : 1)
             self.contentOffset = CGPoint(x: self.frame.origin.x, y: max(min(self.contentOffset.y - yOffset, self.contentSize.height - self.frame.size.height), 0))
