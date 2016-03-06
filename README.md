@@ -33,3 +33,9 @@ public func setTiltingEnabled(tiltingEnabled: Bool)
 
 public func calibrate()
 ```
+
+## Conclusion
+
+If you have any issues or suggestions, please create an issue or a pull request (preferred :). Revisions and improvements are always welcome.
+
+You can contact me on Twitter at [@ERDekhayser](https://twitter.com/ERDekhayser).
