@@ -46,10 +46,11 @@ public class TiltingScrollView: UIScrollView {
     /// At the device's current angle, the scroll view will not scroll.
     
     public func calibrate(){
+        guard let data = motionManager.accelerometerData else { return }
         if UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication().statusBarOrientation){
-            initialAcceleration = motionManager.accelerometerData!.acceleration.y
+            initialAcceleration = data.acceleration.y
         } else {
-            initialAcceleration = motionManager.accelerometerData!.acceleration.x
+            initialAcceleration = data.acceleration.x
         }
     }
 
