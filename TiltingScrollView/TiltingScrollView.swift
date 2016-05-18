@@ -9,20 +9,54 @@
 import UIKit
 import CoreMotion
 
-public class TiltingScrollView: UIScrollView {
+public extension UIScrollView {
 
+	private struct AssociatedKeys {
+		static var TiltingFactor = "tsv_TiltingFactor"
+		
+		static var MotionManager = "tsv_MotionManager"
+		static var InitialAcceleration = "tsv_InitialAcceleration"
+	}
+	
     // MARK: Public Variables
     
     /// Factor by which the accelerometer data is multiplied to scroll the view. Larger values cause faster scrolling.
-    
-    public var tiltingFactor: CGFloat = 20.0
-    
+	
+	public var tiltingFactor: CGFloat {
+		get {
+			return CGFloat((objc_getAssociatedObject(self, &AssociatedKeys.TiltingFactor) as? NSNumber ?? 20).floatValue)
+		}
+		set {
+			objc_setAssociatedObject(self, &AssociatedKeys.TiltingFactor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+		}
+	}
+	
     // MARK: Private Variables
-    
-    private var motionManager = CMMotionManager()
-    
-    private var initialAcceleration: Double!
-    
+	
+	private var motionManager: CMMotionManager {
+		get {
+			let motionManager = objc_getAssociatedObject(self, &AssociatedKeys.MotionManager) as? CMMotionManager
+			if let motionManager = motionManager{
+				return motionManager
+			} else {
+				objc_setAssociatedObject(self, &AssociatedKeys.MotionManager, CMMotionManager(), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+				return objc_getAssociatedObject(self, &AssociatedKeys.MotionManager) as! CMMotionManager
+			}
+		}
+		set {
+			objc_setAssociatedObject(self, &AssociatedKeys.TiltingFactor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+		}
+	}
+	
+	private var initialAcceleration: Double! {
+		get {
+			return (objc_getAssociatedObject(self, &AssociatedKeys.InitialAcceleration) as? NSNumber)?.doubleValue
+		}
+		set {
+			objc_setAssociatedObject(self, &AssociatedKeys.InitialAcceleration, NSNumber(double: newValue), .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+		}
+	}
+	
     // MARK: Public Methods
     
     /// Enables or disables the tilting behavior of the scroll view.
@@ -76,6 +110,7 @@ public class TiltingScrollView: UIScrollView {
             } else {
                 yAcceleration = self.initialAcceleration - data.acceleration.x
             }
+			print(yAcceleration)
             
             let shouldOffsetBeFlipped = UIApplication.sharedApplication().statusBarOrientation == .LandscapeLeft || UIApplication.sharedApplication().statusBarOrientation == .PortraitUpsideDown 
             

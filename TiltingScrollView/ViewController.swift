@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: TiltingScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var calibrateButton: UIButton!
     
     override func viewDidAppear(animated: Bool) {

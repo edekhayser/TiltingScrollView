@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RI-GQ-9fa" customClass="TiltingScrollView" customModule="TiltingScrollView" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RI-GQ-9fa">
                                 <rect key="frame" x="0.0" y="60" width="600" height="540"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUR-L4-BVH">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1968"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu elementum justo. Phasellus non rutrum mauris. Praesent consectetur eleifend diam, ut tempus arcu auctor ut. Quisque lobortis sapien sed ultrices sollicitudin. Morbi sit amet lectus ante. Quisque commodo elit erat. Etiam volutpat laoreet odio, eget luctus dolor mattis bibendum. Mauris vestibulum consequat lorem quis vehicula. Donec velit enim, dignissim non posuere in, ornare eu ipsum.
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu elementum justo. Phasellus non rutrum mauris. Praesent consectetur eleifend diam, ut tempus arcu auctor ut. Quisque lobortis sapien sed ultrices sollicitudin. Morbi sit amet lectus ante. Quisque commodo elit erat. Etiam volutpat laoreet odio, eget luctus dolor mattis bibendum. Mauris vestibulum consequat lorem quis vehicula. Donec velit enim, dignissim non posuere in, ornare eu ipsum.
 
 Aliquam erat volutpat. Pellentesque imperdiet luctus ex, nec efficitur nibh pretium id. Maecenas eu condimentum elit, in luctus tortor. Donec ut elit massa. Maecenas tristique elementum tempor. Morbi lacinia lorem quis lobortis blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis quis lacus et facilisis. Nulla tempor congue risus, quis interdum lorem eleifend ut. Sed id pretium orci. Mauris nec ultrices nisl. Sed magna neque, volutpat vitae quam et, dignissim scelerisque metus.
 
@@ -40,7 +40,7 @@ Pellentesque risus augue, fringilla ac blandit et, mollis eget ipsum. Maecenas e
 
 Praesent lacinia gravida porta. Nulla facilisi. Phasellus tempus facilisis mi et semper. Pellentesque ultrices magna id nisl finibus eleifend. Cras accumsan nec nunc non dignissim. Sed sed sem nec nisi ultricies laoreet. Proin viverra lectus eget diam cursus sagittis. Pellentesque vehicula iaculis est at viverra. Aenean scelerisque, lectus eu vulputate bibendum, diam lectus gravida sapien, eu rhoncus erat metus sed elit. Integer non rutrum ipsum, ut consequat lacus. Vestibulum pretium, metus vitae ultrices tempus, metus neque imperdiet mauris, ac vehicula lectus ex mollis eros. Donec dui lacus, elementum id lacus rhoncus, scelerisque ultrices orci. Pellentesque pretium dolor vel augue lobortis, ac dignissim mauris egestas. Nam id leo sem. Quisque massa sapien, mollis in finibus vel, sodales quis lorem. Nunc fermentum sodales turpis, vitae accumsan libero bibendum et.
 
-Suspendisse potenti. Nullam facilisis facilisis vehicula. Sed ultrices, dui eu posuere vulputate, sem libero sollicitudin enim, a tempor lorem ex id nulla. Nullam facilisis orci orci, posuere porta magna lobortis vitae. Donec sagittis semper magna eget varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus posuere nunc lorem, ut fermentum nisi fringilla a. In ex purus, dapibus at nunc et, congue commodo quam. Sed blandit orci vitae dolor tincidunt convallis vitae eget ex. Curabitur in rhoncus massa, et pellentesque nibh.</mutableString>
+Suspendisse potenti. Nullam facilisis facilisis vehicula. Sed ultrices, dui eu posuere vulputate, sem libero sollicitudin enim, a tempor lorem ex id nulla. Nullam facilisis orci orci, posuere porta magna lobortis vitae. Donec sagittis semper magna eget varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus posuere nunc lorem, ut fermentum nisi fringilla a. In ex purus, dapibus at nunc et, congue commodo quam. Sed blandit orci vitae dolor tincidunt convallis vitae eget ex. Curabitur in rhoncus massa, et pellentesque nibh.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>

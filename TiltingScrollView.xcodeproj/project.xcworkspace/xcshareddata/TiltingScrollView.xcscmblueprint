@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0EB9B442BFF22E7391F1FFAF6413F62B8FE8EFD4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4B4BAACA98DEB00554F1C47B8448075ADE3181B2" : 0,
+    "0EB9B442BFF22E7391F1FFAF6413F62B8FE8EFD4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FD19E9A1-B9EB-4226-92AE-6BEBF3CBAB1D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4B4BAACA98DEB00554F1C47B8448075ADE3181B2" : "",
+    "0EB9B442BFF22E7391F1FFAF6413F62B8FE8EFD4" : "TiltingScrollView\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TiltingScrollView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TiltingScrollView.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/edekhayser\/TiltingScrollView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0EB9B442BFF22E7391F1FFAF6413F62B8FE8EFD4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/edekhayser\/UITableView-RowConvenience.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4B4BAACA98DEB00554F1C47B8448075ADE3181B2"
+    }
+  ]
+}
