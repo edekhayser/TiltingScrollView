@@ -1,7 +1,7 @@
 TiltingScrollView
 ========
 
-UIScrollView extention that scrolls when the user tilts the device.
+UIScrollView extension that scrolls when the user tilts the device.
 
 ##Usage##
 
