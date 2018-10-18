@@ -3,13 +3,13 @@ TiltingScrollView
 
 UIScrollView extension that scrolls when the user tilts the device.
 
-##Usage##
+## Usage
 
 - When your view controller appears on screen (most cases in `viewWillAppear` or `viewDidAppear`), call `scrollView.setTiltingEnabled(true)`.
 - If at any point you want to stop the tilt-to-scroll, call `scrollView.setTiltingEnabled(false)`. This will automatically set `scrollView.scrollingEnabled = true`.
 - You can recalibrate the scroll view at any point by calling `scrollView.calibrate()`. I recommend adding a button that allows the user to choose to recalibrate in order to redefine the angle at which the scroll view goes up and down.
 
-##Public Variables##
+## Public Variables
 
 ```swift
 /// Factor by which the accelerometer data is multiplied to scroll the view. Larger values cause faster scrolling.
@@ -17,7 +17,7 @@ UIScrollView extension that scrolls when the user tilts the device.
 public var tiltingFactor: CGFloat = 20
 ```
 
-##Public Methods##
+## Public Methods
 
 ```swift
 /// Enables or disables the tilting behavior of the scroll view.
